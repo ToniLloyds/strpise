@@ -7,13 +7,14 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "xc": "open ios/strpise.xcworkspace"
   },
   "dependencies": {
     "@stripe/stripe-react-native": "^0.9.0",
     "react": "17.0.2",
     "react-native": "0.68.1",
-    "xc": "open ios/strpise.xcworkspace"
+    "react-native-safe-area-context": "^4.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

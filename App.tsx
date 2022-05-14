@@ -1,7 +1,8 @@
 import {StripeProvider} from '@stripe/stripe-react-native';
-import {SafeAreaView, Text} from 'react-native';
 import React from 'react';
-import CheckoutScreen from './CheckoutScreen';
+
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import CheckoutScreen from './components/pages/CheckoutScreen';
 
 export function App() {
   return (
@@ -9,10 +10,9 @@ export function App() {
       publishableKey="pk_test_wM5GWAdQILVi0Z4RkmFm4nHF"
       // merchantIdentifier="merchant.com.{{YOUR_APP_NAME}}" // required for Apple Pay
     >
-      <SafeAreaView
-        style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+      <SafeAreaProvider>
         <CheckoutScreen />
-      </SafeAreaView>
+      </SafeAreaProvider>
     </StripeProvider>
   );
 }
